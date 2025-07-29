@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PartyZone - Professional Event Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">PartyZone</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Create Unforgettable Events</h1>
+            <p>Plan, promote, and manage professional events with our comprehensive platform</p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary" onclick="openModal('createEvent')">Create Event</button>
+                <a href="#features" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📅</div>
+                    <h3>Smart Planning</h3>
+                    <p>Intelligent scheduling tools with conflict detection, automated reminders, and seamless calendar integration for effortless event coordination.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📢</div>
+                    <h3>Multi-Channel Promotion</h3>
+                    <p>Reach your audience across social media, email campaigns, and custom landing pages with built-in analytics and engagement tracking.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎫</div>
+                    <h3>Ticketing & Registration</h3>
+                    <p>Professional ticketing system with customizable forms, payment processing, and automated attendee management workflows.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">📊</div>
+                    <h3>Real-time Analytics</h3>
+                    <p>Comprehensive insights into attendance, engagement, revenue, and performance metrics with exportable reports and dashboards.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Team Collaboration</h3>
+                    <p>Seamless teamwork with role-based permissions, task assignments, communication tools, and progress tracking features.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Custom Branding</h3>
+                    <p>Fully customizable themes, branded communications, personalized attendee experiences, and white-label solutions available.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section class="dashboard" id="dashboard">
+        <div class="container">
+            <div class="dashboard-content">
+                <div class="dashboard-text">
+                    <h2>Intuitive Dashboard</h2>
+                    <p>Manage all your events from one powerful dashboard. Track registrations, monitor engagement, analyze performance, and coordinate with your team in real-time.</p>
+                    <button class="btn btn-primary" onclick="openModal('demo')">View Demo</button>
+                </div>
+                <div class="dashboard-demo slide-up">
+                    <div class="demo-header">
+                        <h3>Event Dashboard</h3>
+                        <span>Live Data</span>
+                    </div>
+                    <div class="demo-stats">
+                        <div class="stat-card">
+                            <div class="stat-number" id="activeEvents">12</div>
+                            <div class="stat-label">Active Events</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="totalAttendees">2,847</div>
+                            <div class="stat-label">Total Attendees</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="revenue">$45,680</div>
+                            <div class="stat-label">Revenue</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number" id="engagement">94%</div>
+                            <div class="stat-label">Engagement</div>
+                        </div>
+                    </div>
+                    <div class="event-form">
+                        <h4>Quick Event Creation</h4>
+                        <div class="form-group">
+                            <label>Event Name</label>
+                            <input type="text" placeholder="Enter event name" id="eventName">
+                        </div>
+                        <div class="form-group">
+                            <label>Date & Time</label>
+                            <input type="datetime-local" id="eventDate">
+                        </div>
+                        <div class="form-group">
+                            <label>Event Type</label>
+                            <select id="eventType">
+                                <option>Conference</option>
+                                <option>Workshop</option>
+                                <option>Networking</option>
+                                <option>Webinar</option>
+                                <option>Social Event</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="createQuickEvent()" style="width: 100%; margin-top: 1rem;">Create Event</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EventPro</h3>
+                    <p>The ultimate platform for professional event management. Create, promote, and manage events that leave lasting impressions.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Features</h3>
+                    <ul>
+                        <li><a href="#">Event Planning</a></li>
+                        <li><a href="#">Promotion Tools</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Team Management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EventPro. All rights reserved. | Crafted with ❤️ for event professionals</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="createEventModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('createEvent')">&times;</span>
+            <h2>Create New Event</h2>
+            <div class="event-form">
+                <div class="form-group">
+                    <label>Event Title</label>
+                    <input type="text" placeholder="Amazing Conference 2025" id="modalEventName">
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea placeholder="Describe your event..." id="modalEventDesc"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Date & Time</label>
+                    <input type="datetime-local" id="modalEventDate">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" placeholder="Venue or Online" id="modalEventLocation">
+                </div>
+                <div class="form-group">
+                    <label>Category</label>
+                    <select id="modalEventCategory">
+                        <option>Business & Professional</option>
+                        <option>Technology</option>
+                        <option>Arts & Culture</option>
+                        <option>Health & Wellness</option>
+                        <option>Education</option>
+                        <option>Sports & Fitness</option>
+                        <option>Entertainment</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Ticket Price ($)</label>
+                    <input type="number" placeholder="0" min="0" id="modalEventPrice">
+                </div>
+                <button class="btn btn-primary" onclick="submitEvent()" style="width: 100%; margin-top: 1rem;">Create Event</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="demoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('demo')">&times;</span>
+            <h2>Dashboard Demo</h2>
+            <p>Experience the power of EventPro's dashboard with live features:</p>
+            <ul style="margin: 1rem 0; padding-left: 1.5rem;">
+                <li>Real-time event analytics and insights</li>
+                <li>Attendee management and communication</li>
+                <li>Revenue tracking and financial reports</li>
+                <li>Team collaboration and task management</li>
+                <li>Customizable event promotion tools</li>
+            </ul>
+            <p>Ready to transform your event management experience?</p>
+            <button class="btn btn-primary" style="margin-top: 1rem;">Start Free Trial</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
